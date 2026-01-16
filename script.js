@@ -850,3 +850,53 @@ function createStars() {
 }
 
 createStars();
+
+// Shooting Star Cursor Trail
+function createCursorTrail() {
+    let lastX = 0;
+    let lastY = 0;
+    let throttle = false;
+    
+    document.addEventListener('mousemove', (e) => {
+        if (throttle) return;
+        throttle = true;
+        
+        setTimeout(() => {
+            throttle = false;
+        }, 20);
+        
+        // Calculate distance moved
+        const dx = e.clientX - lastX;
+        const dy = e.clientY - lastY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        // Only create trail if mouse moved enough
+        if (distance > 5) {
+            createTrailParticle(e.clientX, e.clientY);
+            lastX = e.clientX;
+            lastY = e.clientY;
+        }
+    });
+}
+
+function createTrailParticle(x, y) {
+    const particle = document.createElement('div');
+    particle.className = 'cursor-trail';
+    particle.style.left = x + 'px';
+    particle.style.top = y + 'px';
+    
+    // Random size variation
+    const size = Math.random() * 4 + 6;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    
+    document.body.appendChild(particle);
+    
+    // Remove particle after animation
+    setTimeout(() => {
+        particle.remove();
+    }, 600);
+}
+
+// Initialize cursor trail
+createCursorTrail();

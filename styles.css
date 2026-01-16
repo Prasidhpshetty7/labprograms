@@ -842,3 +842,57 @@ section {
     .social-links { flex-wrap: wrap; }
     .features { gap: 1rem; }
 }
+
+
+/* Shooting Star Cursor Trail */
+.cursor-trail {
+    position: fixed;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 0%, #c084fc 40%, #a855f7 70%, transparent 100%);
+    box-shadow: 
+        0 0 6px 2px rgba(192, 132, 252, 0.8),
+        0 0 12px 4px rgba(168, 85, 247, 0.6),
+        0 0 20px 6px rgba(168, 85, 247, 0.3);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    animation: trail-fade 0.6s ease-out forwards;
+}
+
+.cursor-trail::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes trail-fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(0.6);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+}
+
+/* Hide cursor trail on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .cursor-trail {
+        display: none;
+    }
+}
