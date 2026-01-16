@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Program Vault</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <h1 class="loader-title">CS Vault</h1>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+    
+    <div class="content">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">CS Vault</div>
+            <nav class="nav">
+                <a href="#programs" class="nav-link">Programs</a>
+                <a href="#sql" class="nav-link">SQL</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#connect" class="nav-link">Connect</a>
+            </nav>
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>CS Program Vault</h1>
+        <p>Your collection of clean, tested programming solutions. 14 lab programs + 4 SQL projects, ready to copy and run.</p>
+        <div class="hero-buttons">
+            <a href="#programs" class="btn btn-primary">View Programs</a>
+            <a href="#sql" class="btn btn-secondary">SQL Projects</a>
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs">
+        <h2 class="section-title">Lab Programs</h2>
+        <p class="section-subtitle">14 Python programs that actually work</p>
+        <div class="programs-grid" id="programsGrid"></div>
+    </section>
+
+    <!-- SQL -->
+    <section id="sql" class="sql-section">
+        <h2 class="section-title">SQL Projects</h2>
+        <p class="section-subtitle">Complete database solutions</p>
+        <div class="sql-grid" id="sqlGrid"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">About This Vault</h2>
+        <p class="about-text">Every piece of code here is tested, clean, and ready to use. Whether you're studying or need a quick reference, we've got you.</p>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-copy"></i>
+                <p>One-click copy</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-check"></i>
+                <p>Tested code</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-code"></i>
+                <p>Clean syntax</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-bolt"></i>
+                <p>Ready to run</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect -->
+    <section id="connect" class="connect-section">
+        <h2 class="section-title">Connect</h2>
+        <p class="section-subtitle">Found this helpful? Let's connect!</p>
+        <div class="social-links">
+            <a href="https://github.com/Prasidhpshetty7" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/prasidh-shetty7/" class="social-link" target="_blank">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://x.com/ShettyPrasidh7" class="social-link" target="_blank">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 <a href="https://prasidhshetty.in" target="_blank">Prasidh P Shetty</a>. All rights reserved.</p>
+    </footer>
+
+    </div><!-- end content -->
+
+    <!-- Toast -->
+    <div id="copiedToast" class="copied-toast">>
+        <i class="fas fa-check"></i> Copied!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

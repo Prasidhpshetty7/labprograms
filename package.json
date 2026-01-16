@@ -1,0 +1,25 @@
+{
+  "name": "futuristic-code-vault",
+  "version": "1.0.0",
+  "description": "Prasidh P Shetty's Futuristic Code Vault - Lab Programs & SQL Projects",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "live-server --port=4173 --open=/index.html"
+  },
+  "keywords": [
+    "portfolio",
+    "programming",
+    "lab-programs",
+    "sql",
+    "futuristic",
+    "code-vault"
+  ],
+  "author": "Prasidh P Shetty",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
